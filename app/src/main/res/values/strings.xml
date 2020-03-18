@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fragments Test</string>
+    <string name="book_kotlin">Learn Kotlin</string>
+    <string name="book_android">Learn Android</string>
+    <string name="book_ktor">Learn Ktor</string>
+    <string name="textview">TextView</string>
+</resources>
