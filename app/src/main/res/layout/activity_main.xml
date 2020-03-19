@@ -6,21 +6,21 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
-    <fragment
+
+    <LinearLayout
+            android:id="@+id/fragtop"
             android:layout_width="match_parent"
-            android:layout_height="0px"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:name="com.example.fragmentstest.BookTitle"
-            android:id="@+id/fragmentBookTitle"
+            android:orientation="horizontal">
+    </LinearLayout>
 
-    />
-
-    <fragment
+    <LinearLayout
+            android:id="@+id/fragbottom"
             android:layout_width="match_parent"
-            android:layout_height="0px"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:name="com.example.fragmentstest.BookTitle"
-            android:id="@+id/fragmentBookDescription"
+            android:orientation="horizontal">
+    </LinearLayout>
 
-    />
 </LinearLayout>

@@ -15,6 +15,9 @@ class BookDescription : Fragment() {
         val v = inflater.inflate(R.layout.book_description, container, false)
        //This statement reads the file /app/res/values/books_descriptions.xml and creates an array out of it
         arrBookDesc = resources.getStringArray(R.array.books_descriptions)
+// persisting state when change to landscape or portrait
+        bookIndex = if (savedInstanceState?.getInt("bookIndex") == null) 0
+        else { savedInstanceState.getInt("bookIndex") }
 
         return v
     }
@@ -22,6 +25,10 @@ class BookDescription : Fragment() {
     fun changeDescription(index: Int): Unit {
         bookIndex = index
         txtDescription?.text = arrBookDesc[bookIndex]
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("bookIndex", bookIndex)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
